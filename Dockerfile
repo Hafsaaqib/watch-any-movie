@@ -5,7 +5,7 @@ EXPOSE 3000
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY package.json .
-npm install --legacy-peer-deps
+RUN npm install --legacy-peer-deps
 COPY . .
 
 CMD ["npm", "start"]
