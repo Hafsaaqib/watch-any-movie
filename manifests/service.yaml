@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myaks
-  namespace: namespace-workflow-1702402943911
+  name: aks-deploy
+  namespace: namespace-workflow-1702408057720
 spec:
   type: LoadBalancer
   selector:
-    app: myaks
+    app: aks-deploy
   ports:
     - protocol: TCP
       port: 3000
