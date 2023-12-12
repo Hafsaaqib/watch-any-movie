@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myaks
+  name: aks-deploy
   labels:
-    app: myaks
-  namespace: namespace-workflow-1702402943911
+    app: aks-deploy
+  namespace: namespace-workflow-1702408057720
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myaks
+      app: aks-deploy
   template:
     metadata:
       labels:
-        app: myaks
+        app: aks-deploy
     spec:
       containers:
-        - name: myaks
-          image: acrworkflow1702402943911.azurecr.io/image-workflow-1702402943911:latest
+        - name: aks-deploy
+          image: acrworkflow1702408057720.azurecr.io/image-workflow-1702408057720:latest
           ports:
             - containerPort: 3000
